@@ -38,6 +38,7 @@ export default class Home extends Component {
 
   // 卸载时
   componentWillUnmount () {
+    console.log('Home组件卸载');
     // 组件卸载时-停止定时器
     clearInterval(this.timerId)
   }
