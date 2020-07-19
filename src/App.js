@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home.js'
 import User from './pages/User.js'
 import Search from './pages/Search.js'
+import LifeCycle from './pages/LifeCycle'
 
 const store = {
   userInfo: {
@@ -17,11 +18,13 @@ function tellme (msg) {
 }
 
 function App () {
+  // console.log('App');
   return (
     <div className="App">
       {/* <Home /> */}
       {/* <User /> */}
-      <Search store={store} tellme={tellme} />
+      {/* <Search store={store} tellme={tellme} /> */}
+      <LifeCycle />
     </div>
   );
 }

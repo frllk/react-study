@@ -87,6 +87,7 @@ export default class Home extends Component {
 
   render () {
     const str = '我是home页面'
+    console.log(str)
     const { date, counter } = this.state
     return (
       <div>
