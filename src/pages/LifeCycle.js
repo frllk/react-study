@@ -11,25 +11,30 @@ export default class LifeCycle extends Component {
     }
     console.log('constructor', this.state.counter);
   }
-
+  // 组件挂载之前
   componentWillMount () {
     console.log('componentWillMount', this.state.counter);
   }
+  // 组件挂载之后
   componentDidMount () {
     console.log('componentDidMount', this.state.counter);
   }
 
-  componentWillUnmount () {
-    // 组件卸载之前
-    console.log('componentWillUnmount', this.state.counter);
-  }
-
-  componentDidUpdate () {
-    console.log('componentDidUpdate', this.state.counter);
-  }
+  // 组件更新之前
   componentWillUpdate () {
     console.log('componentWillUpdate', this.state.counter);
   }
+  // 组件更新之后
+  componentDidUpdate () {
+    console.log('componentDidUpdate', this.state.counter);
+  }
+
+  // 组件卸载之前
+  componentWillUnmount () {
+    console.log('componentWillUnmount', this.state.counter);
+  }
+
+  // 组件是否render
   shouldComponentUpdate (nextProps, nextState) {
     console.log('shouldComponentUpdate', this.state.counter, nextState.counter);
     const { counter } = this.state
