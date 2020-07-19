@@ -11,6 +11,8 @@ export default class Search extends Component {
     name: ''
   }
   handlerInp = () => {
+    const { tellme } = this.props
+    tellme('我是search传递过来的值' + this.state.name)
     console.log('handlerInp')
   }
   handlerChange = (e) => {

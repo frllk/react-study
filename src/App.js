@@ -12,12 +12,16 @@ const store = {
   }
 }
 
+function tellme (msg) {
+  console.log('tellme', msg);
+}
+
 function App () {
   return (
     <div className="App">
       {/* <Home /> */}
       {/* <User /> */}
-      <Search store={store} />
+      <Search store={store} tellme={tellme} />
     </div>
   );
 }
