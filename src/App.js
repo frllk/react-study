@@ -37,11 +37,27 @@ import LifeCycle from './pages/LifeCycle'
 //     </div>
 //   );
 // }
+
+function Child (props) {
+  return <div>Child</div>
+}
+
+const foo = Comp => props => {
+  return (
+    <div style={{ border: '2px solid red', margin: '10px' }}>
+      <Comp {...props}></Comp>
+    </div>
+  )
+}
+
 function App () {
+  const Foo = foo(Child)
   return (
     <div className="App">
       {/* < Home /> */}
-      < User />
+      {/* < User /> */}
+      <Child />
+      <Foo />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from './Layout'
-import { Consumer } from '../AppContext'
+import { Consumer, consumerHandle } from '../AppContext'
 
-export default class Home extends React.Component {
+/* export default class Home extends React.Component {
   render () {
     return <Consumer>{(ctx) => <HomeHandle {...ctx} />}</Consumer>
   }
-}
+} */
 
 function HomeHandle (props) {
   return (
@@ -17,3 +17,4 @@ function HomeHandle (props) {
     </Layout>
   )
 }
+export default consumerHandle(HomeHandle)

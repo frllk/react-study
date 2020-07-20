@@ -1,12 +1,13 @@
 import React from 'react'
-import { Consumer } from '../AppContext';
+import { Consumer, consumerHandle } from '../AppContext';
 import Layout from './Layout';
 
-export default class User extends React.Component {
+
+/* export default class User extends React.Component {
   render () {
     return <Consumer>{(ctx) => <UserHandle {...ctx} />}</Consumer>
   }
-}
+} */
 
 function UserHandle (props) {
   console.log('UserHandle', props)
@@ -18,3 +19,5 @@ function UserHandle (props) {
     </Layout>
   )
 }
+
+export default consumerHandle(UserHandle)
