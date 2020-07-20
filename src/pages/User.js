@@ -29,13 +29,7 @@ export default function User () {
 
 export default class User extends React.Component {
   render () {
-    return (
-      <Layout title="用户信息页面">
-        <div>
-          <h1>我是User页面</h1>
-        </div>
-      </Layout>
-    )
+    return <Consumer>{(ctx) => <UserHandle {...ctx} />}</Consumer>
   }
 }
 /* export default class User extends React.Component {
@@ -50,3 +44,13 @@ export default class User extends React.Component {
     )
   }
 } */
+function UserHandle (props) {
+  console.log('UserHandle', props)
+  return (
+    <Layout title="用户信息页面">
+      <div>
+        <h1>我是User页面</h1>
+      </div>
+    </Layout>
+  )
+}

@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 // import Home from './pages/Home.js'
 import Home from './pages/Home1.js'
-import User from './pages/User.js'
+// import User from './pages/User.js'
+import User from './pages/User1.js'
 import Search from './pages/Search.js'
 import LifeCycle from './pages/LifeCycle'
 
