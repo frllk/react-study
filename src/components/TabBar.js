@@ -13,13 +13,20 @@ export default class TabBar extends Component {
   }
 }
 
-function TabBarHandle (props) {
+/* function TabBarHandle (props) {
   console.log('TabBarHandle', props)
   const { userName, age } = props.userInfo
   return (
     <div>
       <h3>TabBar</h3>
       <p>{userName} - {age}</p>
+    </div>
+  )
+} */
+function TabBarHandle (props) {
+  return (
+    <div className="tabBar">
+      <h3>TabBarHandle</h3>
     </div>
   )
 }
