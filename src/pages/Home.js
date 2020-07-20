@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Consumer } from '../AppContext';
+import TabBar from '../components/TabBar';
 
 export default class Home extends Component {
 
@@ -16,13 +18,14 @@ export default class Home extends Component {
 
   // 挂载时
   componentDidMount () {
-    // 组件挂载时启动定时器每秒更新状态
+    console.log('home loaded!')
+    /* // 组件挂载时启动定时器每秒更新状态
     this.timerId = setInterval(() => {
       // 使用setState方法更新状态
       this.setState({
         date: new Date()
       })
-    }, 1000);
+    }, 1000); */
 
     /* // 方式三
     document.getElementsByTagName('button')[0].addEventListener('click', () => {
@@ -87,7 +90,7 @@ export default class Home extends Component {
 
   render () {
     const str = '我是home页面'
-    console.log(str)
+    console.log(str, this.props)
     const { date, counter } = this.state
     return (
       <div>
@@ -97,7 +100,20 @@ export default class Home extends Component {
         <p>{date.toLocaleString()}</p>
         <p>{counter}</p>
         <button onClick={this.setCounter}>修改counter</button>
+        <hr />
+        <Consumer>{(ctx) => <HomeHandle {...ctx} />}</Consumer>
+        <TabBar></TabBar>
       </div>
     )
   }
+}
+
+function HomeHandle (props) {
+  console.log('hh', props)
+  return (
+    <div>
+      <h2>HomeHandle</h2>
+      <p>{props.userInfo.userName}</p>
+    </div>
+  )
 }

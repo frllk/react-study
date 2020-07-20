@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import { Consumer } from '../AppContext';
 
 // hooks
 export default function User () {
@@ -13,10 +13,14 @@ export default function User () {
     }, 1000);
     return () => clearInterval(timerId)
   })
-
   return (
     <div>
       <h1>我是User页面</h1>
+      <Consumer>
+        {(d) => {
+          return <p>{d.userInfo.userName}</p>
+        }}
+      </Consumer>
       <p>{date.toLocaleString()}</p>
     </div>
   )

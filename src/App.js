@@ -6,11 +6,14 @@ import User from './pages/User.js'
 import Search from './pages/Search.js'
 import LifeCycle from './pages/LifeCycle'
 
+import { Provider, Consumer } from './AppContext'
+
 const store = {
   userInfo: {
     userName: 'xiaoming',
     age: 18
-  }
+  },
+  home: {}
 }
 
 function tellme (msg) {
@@ -18,13 +21,17 @@ function tellme (msg) {
 }
 
 function App () {
-  // console.log('App');
+  console.log('App');
   return (
     <div className="App">
-      {/* <Home /> */}
+      <Provider value={store}>
+        <Home />
+        {/* <Consumer>{ctx => <Home {...ctx} />}</Consumer> */}
+        {/* <User /> */}
+      </Provider>
       {/* <User /> */}
       {/* <Search store={store} tellme={tellme} /> */}
-      <LifeCycle />
+      {/* <LifeCycle /> */}
     </div>
   );
 }
