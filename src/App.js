@@ -8,6 +8,7 @@ import User from './pages/User1.js'
 import Search from './pages/Search.js'
 import LifeCycle from './pages/LifeCycle'
 import HooksPage from './pages/HooksPage';
+import HooksReducer from './pages/HooksReducer';
 
 // import { Provider, Consumer } from './AppContext'
 
@@ -59,7 +60,8 @@ function App () {
       {/* < User /> */}
       {/* <Child /> */}
       {/* <Foo /> */}
-      <HooksPage />
+      {/* <HooksPage /> */}
+      <HooksReducer />
     </div>
   );
 }
