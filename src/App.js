@@ -7,6 +7,7 @@ import Home from './pages/Home1.js'
 import User from './pages/User1.js'
 import Search from './pages/Search.js'
 import LifeCycle from './pages/LifeCycle'
+import HooksPage from './pages/HooksPage';
 
 // import { Provider, Consumer } from './AppContext'
 
@@ -56,8 +57,9 @@ function App () {
     <div className="App">
       {/* < Home /> */}
       {/* < User /> */}
-      <Child />
-      <Foo />
+      {/* <Child /> */}
+      {/* <Foo /> */}
+      <HooksPage />
     </div>
   );
 }
