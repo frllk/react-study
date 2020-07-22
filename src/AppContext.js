@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const { Provider, Consumer } = React.createContext()
-
+export const Context = React.createContext()
+export const { Provider, Consumer } = Context
 /**
  * 高阶组件
  * @param {*} Cmp 组件名
