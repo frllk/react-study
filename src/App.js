@@ -10,6 +10,7 @@ import LifeCycle from './pages/LifeCycle'
 import HooksPage from './pages/HooksPage';
 import HooksReducer from './pages/HooksReducer';
 import HooksContext from './pages/HooksContext';
+import HocPage from './pages/HocPage';
 
 // import { Provider, Consumer } from './AppContext'
 
@@ -63,7 +64,9 @@ function App () {
       {/* <Foo /> */}
       {/* <HooksPage /> */}
       {/* <HooksReducer /> */}
-      <HooksContext />
+      {/* <HooksContext /> */}
+      {/* 高阶组件 */}
+      <HocPage />
     </div>
   );
 }
