@@ -2,7 +2,7 @@
  * 高阶组件
  */
 import React, { Component } from 'react'
-
+import { Button } from 'antd'
 
 
 // 高阶组件是一个函数，它的参数是一个组件
@@ -38,6 +38,7 @@ class HocPage extends Component {
         <h1>HocPage</h1>
         {/* <Foo /> */}
         <Child />
+        <Button type="primary">submit</Button>
       </div>
     )
   }
