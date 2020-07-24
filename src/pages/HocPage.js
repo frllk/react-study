@@ -28,7 +28,9 @@ class Child extends Component {
   return <div>Child</div>
 } */
 
-export default class HocPage extends Component {
+@foo2
+@foo
+class HocPage extends Component {
   render () {
     // const Foo = foo2(foo(Child))
     return (
@@ -40,3 +42,5 @@ export default class HocPage extends Component {
     )
   }
 }
+
+export default HocPage
