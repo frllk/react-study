@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import "antd/dist/antd.css";
 // import Home from './pages/Home.js'
 import Home from './pages/Home1.js'
 // import User from './pages/User.js'
@@ -12,6 +13,7 @@ import HooksReducer from './pages/HooksReducer';
 import HooksContext from './pages/HooksContext';
 import HocPage from './pages/HocPage';
 import FormPage from './pages/Form/FormPage';
+import FormPageDecorators from './pages/Form/FormPageDecorators';
 
 // import { Provider, Consumer } from './AppContext'
 
@@ -69,7 +71,8 @@ function App () {
       {/* 高阶组件 */}
       {/* <HocPage /> */}
       {/* 表单组件 */}
-      <FormPage />
+      {/* <FormPage /> */}
+      <FormPageDecorators />
     </div>
   );
 }

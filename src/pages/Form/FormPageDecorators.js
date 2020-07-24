@@ -2,11 +2,11 @@
  * 表单组件
  */
 import React, { Component } from 'react'
-import { Form, Input, Button, Icon } from 'antd'
+import { Form, Input, Button } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 const FormItem = Form.Item
 
-export default class FormPage extends Component {
+class FormPageDecorators extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -25,20 +25,18 @@ export default class FormPage extends Component {
   }
 
 
-
   render () {
     const { name, password } = this.state
+    // console.log('FormPageDecorators', Form.useForm())
     return (
       <div>
-        <h1>FormPage</h1>
+        <h1>FormPageDecorators</h1>
         <Form>
           <FormItem label="姓名">
-            <Input prefix={<UserOutlined type="user" />}
-              onChange={(event) => this.changeInp('name', event)} />
+            <Input prefix={<UserOutlined className="site-form-item-icon" />} />
           </FormItem>
           <FormItem label="密码">
-            <Input type="password" prefix={<LockOutlined type="lock" />}
-              onChange={(event) => this.changeInp('password', event)} />
+            <Input type="password" prefix={<LockOutlined className="site-form-item-icon" />} />
           </FormItem>
           <FormItem>
             <Button onClick={this.submit} type="primary">提交</Button>
@@ -48,3 +46,4 @@ export default class FormPage extends Component {
     )
   }
 }
+export default FormPageDecorators
