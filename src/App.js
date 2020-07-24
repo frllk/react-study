@@ -14,6 +14,10 @@ import HooksContext from './pages/HooksContext';
 import HocPage from './pages/HocPage';
 import FormPage from './pages/Form/FormPage';
 import FormPageDecorators from './pages/Form/FormPageDecorators';
+import MyFormPage from './pages/Form/MyFormPage';
+
+
+
 
 // import { Provider, Consumer } from './AppContext'
 
@@ -72,7 +76,8 @@ function App () {
       {/* <HocPage /> */}
       {/* 表单组件 */}
       {/* <FormPage /> */}
-      <FormPageDecorators />
+      {/* <FormPageDecorators /> */}
+      <MyFormPage />
     </div>
   );
 }
