@@ -11,6 +11,7 @@ import HooksPage from './pages/HooksPage';
 import HooksReducer from './pages/HooksReducer';
 import HooksContext from './pages/HooksContext';
 import HocPage from './pages/HocPage';
+import FormPage from './pages/Form/FormPage';
 
 // import { Provider, Consumer } from './AppContext'
 
@@ -66,7 +67,9 @@ function App () {
       {/* <HooksReducer /> */}
       {/* <HooksContext /> */}
       {/* 高阶组件 */}
-      <HocPage />
+      {/* <HocPage /> */}
+      {/* 表单组件 */}
+      <FormPage />
     </div>
   );
 }
